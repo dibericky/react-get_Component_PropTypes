@@ -1,17 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./styles.css";
 import MyComponent from "./MyComponent";
+import logPropTypes from "./logPropTypes";
 
 function App() {
-  return (
-    <div className="App">
-      <h2>{"MyComponent PropTypes are in the console"}</h2>
-    </div>
-  );
+  return <h2>{"MyComponent's PropTypes are in the console"}</h2>;
 }
 
-console.log(MyComponent.propTypes);
+logPropTypes(MyComponent);
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
